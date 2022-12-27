@@ -8,7 +8,7 @@ function coreConcepts() {
     <div>
       <header className="App-header">
         <p>See You Tomorrow</p>
-        <Person name="Md. Neamul Hoqe"></Person>
+        <Person name="Md. Neamul Hoqe" jobs="HTML5, CSS3, Bootstrap4 & Bootstrap5, JS, JQuery, React, PHP7"></Person>
       </header>
       <main></main>
       <footer></footer>
@@ -35,14 +35,29 @@ function Person(whats) {
     margin: "1px auto",
     // textAlign: "center",
   };
-
+const table = {
+  // backgroundImage: url("./logo.svg")
+}
   /* back data to Person tag where invoked */
   return (
     <section>
-      <div style={div}>
-        <h1 style={h1}>{whats.name}</h1>
-        <h3 style={h3}>This is subtitle of this page</h3>
-      </div>
+      <table border={"3"}>
+        <thead>
+          <tr>
+            <th>I am {whats.name}</th>
+            <th>We need to learn more and more and more to reach the goal.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style={{textAlign: "center"}} colSpan={2}>Al Hamdulill-ah. I have enouph knowledge in {whats.jobs}</td>
+          </tr>
+          <tr>
+            {/* need To be import images in top, before  use it in your page */}
+            <td style={{textAlign: "center"}} colSpan={2}><img src={logo} alt="This is an image" /></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   );
 }
